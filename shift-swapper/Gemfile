@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-
+ruby '2.4.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.10'
 # Use sqlite3 as the database for Active Record
@@ -16,8 +16,13 @@ gem 'coffee-rails', '~> 4.1.0'
 
 #Adding Gems
 gem 'haml'
-gem 'cucumber', '2.0.0'
 gem 'capybara', '2.4.4'
+
+group :test do
+  gem 'cucumber-rails', :require => false
+  gem 'cucumber-rails-training-wheels'
+  gem 'simplecov', :require => false
+end
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -37,9 +42,14 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# for Heroku deployment - as described in Ap. A of ELLS book
 group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  gem 'database_cleaner', '1.4.1'
+  gem 'capybara', '2.4.4'
+  gem 'launchy'
+  gem 'rspec-rails', '3.7.2'
+  gem 'ZenTest', '4.11.0'
 end
 
 group :development do
