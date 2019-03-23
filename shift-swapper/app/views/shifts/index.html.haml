@@ -1,0 +1,15 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %link{:href => "/default.css", :rel => "stylesheet", :type => "text/css"}/
+    %title Binghamton University
+  %body
+    .container
+      #header.span-24
+        %p Welcome To The BU Shift Swapper
+      .span-24
+        = yield
+      #footer.span-24
+        %p CS 545
+      = link_to '<button type="button">Sign in as Guest</button>'.html_safe, guide_dashboard_path
