@@ -1,0 +1,19 @@
+ body {
+     
+     text-align: center;
+     font-size: 1em;
+     font-family: 'Lato', sans-serif;
+     outline: 2px solid black;
+     outline-offset: 10px;
+     <!-- background: linear-gradient(honeydew, lightblue); 
+     background-image: url(/shift-swapper/app/assets/images/tree_background.png) -->
+     background-repeat: no-repeat;
+     background-size: cover;
+ }
+ 
+ h1 {
+     font-weight: 700;
+     font-size: 3em;
+     font-family: 'Lato', sans-serif;
+     color: #228B22;
+ }

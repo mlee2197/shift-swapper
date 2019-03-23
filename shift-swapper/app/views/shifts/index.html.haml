@@ -1,15 +1,28 @@
 !!!
 %html
   %head
-    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
-    %link{:href => "/default.css", :rel => "stylesheet", :type => "text/css"}/
-    %title Binghamton University
+    //%meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %link{:href => "assets/hello.css", :rel => "stylesheet", :type => "text/css"}/
+    %h1 Binghamton University
   %body
     .container
-      #header.span-24
-        %p Welcome To BU Shift Swapper
+      #header.span-24 
+        %h2 Welcome To BU Shift Swapper
       .span-24
         = yield
       #footer.span-24
-        %p CS 545
-      
+        %p 
+          Username : 
+          = text_field_tag 'Username'
+        %p 
+          Password : 
+          = text_field_tag 'Password'
+          %br
+          = button_tag 'Sign-in', type: 'submit', class: 'btn btn-primary primary-button'
+          %br
+          = button_tag 'Reset Password', type: 'submit', class: 'btn btn-primary primary-button'
+        %p Need an account?
+        = button_tag 'Register', type: 'submit', class: 'btn btn-primary primary-button'
+        
+    
+        
