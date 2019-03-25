@@ -6,6 +6,6 @@ Feature: display the user registration page
   
 Scenario: Show user registation page
   Given I am on the homepage
-  When I follow "Register"
+  When I follow "Register New Account"
   Then I should see "registration" 
   
