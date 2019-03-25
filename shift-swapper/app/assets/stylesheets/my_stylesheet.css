@@ -1,3 +1,9 @@
  body {
      background-image: url("https://images-na.ssl-images-amazon.com/images/I/51Hl%2BVvQkNL._SX466_.jpg");
  }
+ 
+ label {
+  display: inline-block;
+  width: 140px;
+  text-align: -webkit-match-parent;
+}

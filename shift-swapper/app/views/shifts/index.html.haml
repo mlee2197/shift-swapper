@@ -2,7 +2,7 @@
 %html
   %head
     //%meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
-    %link{:href => "assets/hello.css", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "assets/my_stylsheet.css", :rel => "stylesheet", :type => "text/css"}/
     %h1 Binghamton University
   %body
     .container
@@ -18,11 +18,10 @@
           Password : 
           = text_field_tag 'Password'
           %br
-          = button_tag 'Sign-in', type: 'submit', class: 'btn btn-primary primary-button'
-          %br
-          = button_tag 'Reset Password', type: 'submit', class: 'btn btn-primary primary-button'
+          =link_to button_tag 'Sign-in'
+          =link_to button_tag 'Reset Password'
         %p Need an account?
-        = button_tag 'Register', type: 'submit', class: 'btn btn-primary primary-button'
-        
+        =link_to 'Register', registration_path
+       
     
         

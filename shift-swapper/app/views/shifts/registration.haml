@@ -1,0 +1,27 @@
+%h3 New User Registration
+
+
+= form_tag registration_path do
+
+  = label :fname, :title, 'FirstName'
+  = text_field :fname, 'title'
+  %br
+  = label :lname, :title, 'LastName'
+  = text_field :lname, 'title'
+  %br
+  = label :uname, :title, 'Username'
+  = text_field :uname, 'title'
+  %br
+  = label :pwd, :title, 'Password'
+  = text_field :pwd, 'title'
+  %br
+  = label :email, :title, 'E-Mail Address'
+  = text_field :email, 'title'
+  %br
+  = label :dh, :dininghalls, 'Dining Hall'
+  = select :dh, :dininghalls, ['Chenango','HillSide','MarketPlace','Applebees','CIW']
+  %br
+  %br
+  %br
+  %br
+  = submit_tag 'Submit & Create Profile'
