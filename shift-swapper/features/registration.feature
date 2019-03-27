@@ -7,5 +7,14 @@ Feature: display the user registration page
 Scenario: Show user registation page
   Given I am on the login page
   When I click "Register New Account"
-  Then I should see "registration" 
+  Then I should see "New User Registration" 
+  And I should see "First Name"
+  And I should see "Last Name"
+  And I should see "Username"
+  And I should see "Password"
+  And I should see "E-Mail Address"
+  And I should see "Dining Hall"
+
+Scenario: Register new user
+  Given I am on the registration page
   

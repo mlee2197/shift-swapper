@@ -3,20 +3,20 @@
 
 = form_tag registration_path do
 
-  = label :fname, :title, 'FirstName'
-  = text_field :fname, 'title'
+  = label :fname, :title, 'First Name'
+  = text_field :fname, 'fname'
   %br
-  = label :lname, :title, 'LastName'
-  = text_field :lname, 'title'
+  = label :lname, :title, 'Last Name'
+  = text_field :lname, 'lname'
   %br
   = label :uname, :title, 'Username'
-  = text_field :uname, 'title'
+  = text_field :uname, 'uname'
   %br
   = label :pwd, :title, 'Password'
-  = text_field :pwd, 'title'
+  = text_field :pwd, 'pwd'
   %br
   = label :email, :title, 'E-Mail Address'
-  = text_field :email, 'title'
+  = text_field :email, 'email'
   %br
   = label :dh, :dininghalls, 'Dining Hall'
   = select :dh, :dininghalls, ['Chenango','HillSide','MarketPlace','Applebees','CIW']
