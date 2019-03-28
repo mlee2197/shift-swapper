@@ -4,8 +4,12 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   
+  get '/usercreation', to: 'users#create'
   get '/registration', to: 'shifts#registration'
   get '/index', to: 'shifts#index'
+  
+  resources :users
+  
   root 'shifts#index'
 
   # Example of regular route:

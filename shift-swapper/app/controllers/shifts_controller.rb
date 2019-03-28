@@ -3,6 +3,7 @@ class ShiftsController < ApplicationController
   # For APIs, you may want to use :null_session instead.
   def index
   end
+ 
   def registration
   end
 end
