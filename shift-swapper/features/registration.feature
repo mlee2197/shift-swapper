@@ -17,4 +17,6 @@ Scenario: Show user registation page
 
 Scenario: Register new user
   Given I am on the registration page
+  When I fill in "First Name" with "Michael"
+  And I click on the button "Submit & Create Profile"
   

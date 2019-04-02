@@ -12,16 +12,16 @@
         = yield
       #footer.span-24
         %p 
-          Username : 
-          = text_field_tag 'Username'
+          = label :uname, :title, 'Username:'
+          = text_field :user, 'uname'
         %p 
-          Password : 
-          = password_field_tag 'Password'
+          = label :password, :title, 'Password:'
+          = password_field :user, 'password'
           %br
           %br
           
-          =link_to button_tag 'Sign-in'
-          =link_to button_tag 'Reset Password'
+          =link_to 'Sign-in' , login_path
+          =link_to 'Reset Password'
         %p Need an account?
         =link_to 'Register New Account', registration_path
        
