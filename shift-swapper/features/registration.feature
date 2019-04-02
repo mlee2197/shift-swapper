@@ -15,8 +15,8 @@ Scenario: Show user registation page
   And I should see "E-Mail Address"
   And I should see "Dining Hall"
 
-Scenario: Register new user
-  Given I am on the registration page
-  When I fill in "First Name" with "Michael"
-  And I click on the button "Submit & Create Profile"
+#Scenario: Register new user
+  #Given I am on the registration page
+  #When I fill in "First Name" with "Michael"
+  #And I click on the button "Submit & Create Profile"
   
