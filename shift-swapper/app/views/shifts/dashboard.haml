@@ -1,1 +1,27 @@
 %h2 Welcome to Binghamton University Dining Services
+%form
+  !!!
+%html
+  %head
+  %link{:href => "assets/dashboard.css", :rel => "stylesheet", :type => "text/css"}/
+  %body
+    .logout-heading
+      =link_to 'Logout' , logout_path
+    .container
+      #header.span-24 
+      .span-24
+        = yield
+      #footer.span-24
+        =link_to '| User Profile |' 
+        =link_to '| Dining Locations |' 
+        %br
+        %br
+        %br
+        %br
+        %br
+        %br
+        %br
+        =link_to '| FAQ & Quick Links |'
+       
+    
+        
