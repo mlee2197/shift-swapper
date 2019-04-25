@@ -2,7 +2,7 @@
 %html
   %head
     //%meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
-    %link{:href => "assets/my_stylsheet.css", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "assets/my_stylesheet.css", :rel => "stylesheet", :type => "text/css"}/
     %h1 Binghamton University
   %body
     .container
@@ -12,16 +12,18 @@
         = yield
       #footer.span-24
         %p 
-          = label :uname, :title, 'Username:'
-          = text_field :user, 'uname'
+          //= label :uname, :title, 'Username:'
+          //= text_field :user, 'uname'
         %p 
-          = label :password, :title, 'Password:'
-          = password_field :user, 'password'
+          //= label :password, :title, 'Password:'
+          //= password_field :user, 'password'
           %br
           %br
           
-          =link_to 'Sign-in', github_auth_path
-          =link_to 'Reset Password', dashboard_path
+          =link_to 'Sign-in with GitHub ', '/auth/github'
+          %br
+          %br
+          =link_to 'Sign-in with Facebook', '/auth/facebook'
         //%p Need an account?
         //=link_to 'Register New Account', registration_path
        

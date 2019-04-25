@@ -6,19 +6,26 @@ Rails.application.routes.draw do
   
   get '/dashboard', to: 'dashboards#index'
   #get '/login', to: 'sessions#create'
-  get '/usercreation', to: 'users#create'
-  get '/registration', to: 'shifts#registration'
+  #get '/usercreation', to: 'users#create'
+  #get '/registration', to: 'shifts#registration'
   get '/index', to: 'shifts#index'
   
   resources :users
   
-  get 'auth/developer', :as => 'developer_auth'
-  get 'auth/github', :as => 'github_auth'
+  
+  
+  #get 'auth/developer', :as => 'developer_auth'
+  #get 'auth/github', :as => 'github_auth'
+  #get 'auth/facebook', :as => 'facebook_auth'
   
   get '/login', :to => 'sessions#new', :as => 'login'
   match 'auth/:provider/callback', :to => 'sessions#create', :via => [:get, :post]
   match 'auth/failure', :to => 'sessions#failure', :via => [:get, :post]
   get 'sessions/destroy', :as => 'logout'
+  get '/cleanup/', :to => 'sessions#cleanup', :as => :cleanup
+  get '/examine', :to => 'sessions#examine', :as => :examine
+  
+  get '/userprofile', :to => 'sessions#userprofile', :as => :userprofile
   
   root 'shifts#index'
   

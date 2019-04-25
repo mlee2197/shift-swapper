@@ -5,8 +5,5 @@ Feature: display the user login page
     
 Scenario: Show login page UI
     Given I am on the login page
-    Then I should see "Username"
-    And I should see "Password"
-    And I should see "Sign-in"
-    And I should see "Reset Password"
-    And I should see "Register New Account"
+    Then I should see "Sign-in with GitHub"
+    And I should see "Sign-in with Facebook"

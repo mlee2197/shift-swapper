@@ -1,3 +1,7 @@
 .logout-heading{
     float: right;
 }
+
+.myFlashMsgDiv {
+ background:green;
+}

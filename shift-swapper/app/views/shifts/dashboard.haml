@@ -12,8 +12,7 @@
       .span-24
         = yield
       #footer.span-24
-        %h4 "Welcome user #{@authorization.user.name}!"
-        =link_to '| User Profile |' 
+        =link_to '| User Profile |' , userprofile_path
         =link_to '| Dining Locations |' 
         %br
         %br

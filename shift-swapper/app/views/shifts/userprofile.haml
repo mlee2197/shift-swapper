@@ -1,0 +1,21 @@
+%h2 User Profile
+
+
+= form_tag users_path do
+
+  %ul#details
+  %li
+    Name :
+    = User.find(session[:user_id]).name
+  %br  
+  %li
+    E-Mail :
+    = User.find(session[:user_id]).email
+  %br
+  = label :dh, :dininghalls, 'Dining Hall'
+  = select :user, :dininghalls, ['Chenango','HillSide','MarketPlace','Hinman','CIW']
+  %br
+  %br
+  %br
+  %br
+  = submit_tag 'Submit & Edit Profile'
