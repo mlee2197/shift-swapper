@@ -26,6 +26,10 @@ Rails.application.routes.draw do
   get '/examine', :to => 'sessions#examine', :as => :examine
   
   get '/userprofile', :to => 'sessions#userprofile', :as => :userprofile
+
+  get 'selectshifts', :to => 'sessions#selectshifts', :as => :selectshifts
+  
+  get 'faqAndquicklinks', :to => 'sessions#faqAndquicklinks', :as => :faqAndquicklinks
   
   root 'shifts#index'
   

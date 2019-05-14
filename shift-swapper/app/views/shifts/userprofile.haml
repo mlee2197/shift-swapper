@@ -1,21 +1,27 @@
-%h2 User Profile
-
-
+%h2 Edit User Profile
+  
 = form_tag users_path do
-
+  %html
+  %head
+  %link{:href => "assets/dashboard.css", :rel => "stylesheet", :type => "text/css"}/
+  %body
   %ul#details
-  %li
     Name :
     = User.find(session[:user_id]).name
-  %br  
-  %li
+    %br
+    %br
     E-Mail :
     = User.find(session[:user_id]).email
-  %br
-  = label :dh, :dininghalls, 'Dining Hall'
-  = select :user, :dininghalls, ['Chenango','HillSide','MarketPlace','Hinman','CIW']
-  %br
-  %br
-  %br
-  %br
-  = submit_tag 'Submit & Edit Profile'
+    %br
+    %br
+    .dininghallinfo
+      = label :dh, :dininghalls, 'Dining Hall'
+      = select :user, :dininghalls, ['None','Chenango','Applachian','MarketPlace','Hinman','CIW'], :selected => current_user.dininghalls
+    %br 
+    %br
+    = submit_tag 'Save Changes', data: { confirm: 'Are you sure?' }, id: "submit_button"
+    = link_to 'Go Back', dashboard_path
+    
+  %script{:src => "assets/myjavascript.js"}   
+  //= link_to 'Save',  @post, data: { confirm: 'Are you sure?' }
+  //= submit_tag("Edit & Submit Profile", name: 'sessions[edituserprofile]')

@@ -12,7 +12,7 @@ class SessionsController < ApplicationController
   def create
     begin
       # User is already signed in
-      debugger
+      #debugger
       if session? 
         puts 'we have a session'
         if same_as_logged_in_user? auth_hash['info']
@@ -30,7 +30,7 @@ class SessionsController < ApplicationController
           message = "Welcome back #{auth.user.name}! " + 
                     "You have logged in via #{auth.provider}."
         else
-          debugger
+         #debugger
           # User has already registerd and is logging in with new provider
           if User.exists?(auth_hash['info'])
             user = User.find_with_omniauth(auth_hash['info'])
@@ -67,6 +67,14 @@ class SessionsController < ApplicationController
   
   def userprofile
     render "shifts/userprofile"
+  end
+  
+  def selectshifts
+    render "shifts/shiftselection"
+  end
+  
+  def faqAndquicklinks
+    render "shifts/faqAndquicklinks"
   end
   
   def examine

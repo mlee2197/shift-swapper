@@ -20,9 +20,7 @@ class ApplicationController < ActionController::Base
   def current_user
     # Avoids unnecessary database queries if already set
     puts 'Some user'
-
     @current_user ||= User.find(session[:user_id])
-  
   end
 
   # predicate

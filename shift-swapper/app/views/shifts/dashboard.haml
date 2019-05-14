@@ -3,6 +3,7 @@
   !!!
 %html
   %head
+  %script{:src => "assets/myjavascript.js"}  
   %link{:href => "assets/dashboard.css", :rel => "stylesheet", :type => "text/css"}/
   %body
     .logout-heading
@@ -13,7 +14,7 @@
         = yield
       #footer.span-24
         =link_to '| User Profile |' , userprofile_path
-        =link_to '| Dining Locations |' 
+        =link_to '| Dining Locations |', selectshifts_path 
         %br
         %br
         %br
@@ -21,7 +22,7 @@
         %br
         %br
         %br
-        =link_to '| FAQ & Quick Links |'
-       
-    
+        =link_to '| FAQ & Quick Links |', faqAndquicklinks_path
+  
+      
         
