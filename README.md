@@ -57,9 +57,11 @@ All other gems (without specific versions) are found in the gemfile
 
 Instructions for Continuation
 ------------------------------
-Get the database setup with "rake db:migrate"
-Seed the database with some initial data using "rake db:seed" (this step is not required)
-Run the server via the command "rails -server -p $PORT -b $IP"
+1. You can clone this repo using "git clone https://github.com/mlee138/shift-swapper/.git"
+2. Do a bundle install --production
+3. Get the database setup with "rake db:migrate"
+4. Seed the database with some initial data using "rake db:seed" (this step is not required)
+5. Run the server via the command "rails -server -p $PORT -b $IP"
 
 
 Implemented Work
